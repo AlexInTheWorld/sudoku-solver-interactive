@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+}
+
+#sudoku-container {
+  display: grid;
+  position: relative;
+  border: 3px solid black;
+  width: 60vw;
+  height: 60vw;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.sudoku-unit {
+  color: darkred;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wVborder {
+  border-left: 3px solid #666699;
+}
+
+.wHborder {
+  border-top: 3px solid #666699;
+}
+
+.left-border {
+  border-left: 1px solid #666699;
+}
+
+.bottom-border {
+  border-bottom: 1px solid #666699;
+}
+
+.solved {
+  font-weight: bold;
+  color: black;
+}
+
+input {
+  text-align: center;
+  border: none;
+  width: 100%;
+  height: 100%;
+}
+
+input:focus {
+  background: lavender;
+}
+
+.err-msg {
+  background: rgb(255, 192, 203, 1);
+  position: absolute;
+  text-align: center;
+  font-family: 'Brush Script MT', serif;
+  max-width: 100%;
+  animation-name: fadeOut;
+  animation-duration: 4s;
+}
+
+div > p {
+  margin: 0;
+  padding: 0 5px;
+  border: 1px solid pink;
+}
+
+button {
+  margin: 5px;
+}
+
+@keyframes fadeOut {
+  from {
+    background-color: rgba(255, 192, 203, 1);
+    }
+  to {
+    background-color: rgba(255, 255, 255, 0.3);
+    }
+}
+
+@media only screen and (min-width: 400px) {
+  input, .err-msg {
+    font-size: 3vw;
+  }
+}
